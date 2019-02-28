@@ -22,20 +22,37 @@ public class LoginViewController: UIViewController {
     
     public func initUI()
     {
-        for textField in [emailTextfld, passwordTextFld]
-        {
-            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: (textField?.frame.size.height)!))
-            textField?.leftView = paddingView
-            textField?.leftViewMode = .always
-            
-            textField?.layer.cornerRadius = textField!.frame.height/2
-            textField?.layer.borderWidth = 1
-            textField?.layer.borderColor = UIColor.darkGray.cgColor
-        }
+        emailTextfld.layer.cornerRadius = emailTextfld.frame.height/2
+        emailTextfld.layer.borderWidth  = 1
+        emailTextfld.layer.borderColor  = UIColor.darkGray.cgColor
+        
+        passwordTextFld.layer.cornerRadius = passwordTextFld.frame.height/2
+        passwordTextFld.layer.borderWidth  = 1
+        passwordTextFld.layer.borderColor  = UIColor.darkGray.cgColor
+        
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: (emailTextfld?.frame.size.height)!))
+        emailTextfld.leftView = paddingView
+        passwordTextFld.leftView = paddingView
+        emailTextfld.leftViewMode = .always
+        passwordTextFld.leftViewMode = .always
     }
 
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         print("username \(String(describing: emailTextfld.text)) password \(String(describing: passwordTextFld.text))")
+        
+        emailTextfld.layer.cornerRadius = emailTextfld.frame.height/2
+        emailTextfld.layer.borderWidth  = 1
+        emailTextfld.layer.borderColor  = UIColor.darkGray.cgColor
+        
+        passwordTextFld.layer.cornerRadius = passwordTextFld.frame.height/2
+        passwordTextFld.layer.borderWidth  = 1
+        passwordTextFld.layer.borderColor  = UIColor.darkGray.cgColor
+        
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: (emailTextfld?.frame.size.height)!))
+        emailTextfld.leftView = paddingView
+        passwordTextFld.leftView = paddingView
+        emailTextfld.leftViewMode = .always
+        passwordTextFld.leftViewMode = .always
     }
     
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
