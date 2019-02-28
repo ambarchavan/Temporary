@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TemporaryPODS'
-  s.version          = '0.0.9'
+  s.version          = '0.1.0'
   s.summary          = 'My first project Temporary.'
   
   s.description      = <<-DESC
