@@ -14,6 +14,8 @@ public class LoginViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        emailTextfld.backgroundColor = UIColor.darkGray
+        emailTextfld.layer.borderColor = UIColor.red.cgColor
         initUI()
     }
     
