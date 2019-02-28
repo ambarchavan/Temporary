@@ -22,30 +22,76 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXY-82-AtP">
-                    <rect key="frame" x="139" y="214" width="97" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ygc-Av-A5i">
-                    <rect key="frame" x="139" y="259" width="97" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXp-4C-G8f">
-                    <rect key="frame" x="139" y="318" width="97" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Login"/>
-                    <connections>
-                        <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="PSQ-oa-aD6"/>
-                    </connections>
-                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsX-AF-Iol">
+                    <rect key="frame" x="0.0" y="218.5" width="375" height="230"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fXY-82-AtP">
+                            <rect key="frame" x="20" y="20" width="335" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="w6F-Ve-ZzT"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ygc-Av-A5i">
+                            <rect key="frame" x="20" y="76" width="335" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="iUO-dz-fGM"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXp-4C-G8f">
+                            <rect key="frame" x="20" y="140" width="335" height="40"/>
+                            <color key="backgroundColor" red="0.0" green="0.69803921570000005" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="3k7-Pz-ck9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="LOGIN">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="PSQ-oa-aD6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sxi-6Y-NNJ">
+                            <rect key="frame" x="20" y="190" width="335" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="Uxt-Go-54e"/>
+                            </constraints>
+                            <state key="normal" title="Forgot your password?"/>
+                            <connections>
+                                <action selector="forgotPasswordButtonTapped:" destination="-1" eventType="touchUpInside" id="yWS-XM-ZJP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="xXp-4C-G8f" secondAttribute="trailing" constant="20" id="3fB-iF-McO"/>
+                        <constraint firstItem="Sxi-6Y-NNJ" firstAttribute="top" secondItem="xXp-4C-G8f" secondAttribute="bottom" constant="10" id="7cU-Wl-A20"/>
+                        <constraint firstItem="Ygc-Av-A5i" firstAttribute="top" secondItem="fXY-82-AtP" secondAttribute="bottom" constant="16" id="9Z1-Vx-LLS"/>
+                        <constraint firstAttribute="trailing" secondItem="Ygc-Av-A5i" secondAttribute="trailing" constant="20" id="AYN-G3-D0j"/>
+                        <constraint firstItem="xXp-4C-G8f" firstAttribute="top" secondItem="Ygc-Av-A5i" secondAttribute="bottom" constant="24" id="Df1-ZU-BgD"/>
+                        <constraint firstItem="xXp-4C-G8f" firstAttribute="leading" secondItem="fsX-AF-Iol" secondAttribute="leading" constant="20" id="HdF-6g-iUe"/>
+                        <constraint firstItem="fXY-82-AtP" firstAttribute="leading" secondItem="fsX-AF-Iol" secondAttribute="leading" constant="20" id="O9a-wG-bix"/>
+                        <constraint firstAttribute="height" constant="230" id="Tv4-Ro-xhL"/>
+                        <constraint firstAttribute="trailing" secondItem="Sxi-6Y-NNJ" secondAttribute="trailing" constant="20" id="bh3-Z1-vAM"/>
+                        <constraint firstItem="Sxi-6Y-NNJ" firstAttribute="leading" secondItem="fsX-AF-Iol" secondAttribute="leading" constant="20" id="dKH-qa-XhL"/>
+                        <constraint firstAttribute="trailing" secondItem="fXY-82-AtP" secondAttribute="trailing" constant="20" id="e8c-XM-uzM"/>
+                        <constraint firstItem="Ygc-Av-A5i" firstAttribute="leading" secondItem="fsX-AF-Iol" secondAttribute="leading" constant="20" id="eeW-r5-kgs"/>
+                        <constraint firstItem="fXY-82-AtP" firstAttribute="top" secondItem="fsX-AF-Iol" secondAttribute="top" constant="20" id="iEe-zd-JgD"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fsX-AF-Iol" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LyM-Rg-RMN"/>
+                <constraint firstItem="fsX-AF-Iol" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="O0e-pn-REW"/>
+                <constraint firstItem="fsX-AF-Iol" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O8V-a9-5tt"/>
+                <constraint firstItem="fsX-AF-Iol" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="OYK-4i-smA"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
         </view>

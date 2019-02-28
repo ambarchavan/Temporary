@@ -22,6 +22,11 @@ public class LoginViewController: UIViewController {
         print("username \(String(describing: emailTextfld.text)) password \(String(describing: passwordTextFld.text))")
     }
     
+    @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
+        print("Can you help me out resetting the password?")
+    }
+    
+    
     public init() {
         super.init(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
     }
