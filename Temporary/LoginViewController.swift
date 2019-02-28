@@ -14,8 +14,21 @@ public class LoginViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initUI()
+    }
+    
+    public func initUI()
+    {
+        for textField in [emailTextfld, passwordTextFld]
+        {
+            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: (textField?.frame.size.height)!))
+            textField?.leftView = paddingView
+            textField?.leftViewMode = .always
+            
+            textField?.layer.cornerRadius = textField!.frame.height/2
+            textField?.layer.borderWidth = 1
+            textField?.layer.borderColor = UIColor.darkGray.cgColor
+        }
     }
 
     @IBAction func loginButtonTapped(_ sender: UIButton) {

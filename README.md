@@ -5,7 +5,7 @@ Temporary is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'TemporaryPODS', '0.0.4'
+pod 'TemporaryPODS', '0.0.6'
 ```
 
 ## Author
